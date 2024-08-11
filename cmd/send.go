@@ -17,8 +17,8 @@ var sendCmd = &cobra.Command{
 	Long:  `Send a file to a specified destination.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		var Trans transfer.Transfer
-		Trans = &transfer.TCPTransfer{}
-		err := Trans.SendFile(filepath, destinationIndex)
+		Trans = &transfer.TCPTransfer{} // 使用TCP协议
+		err := Trans.Send(filepath, destinationIndex)
 		if err != nil {
 			fmt.Printf("Failed to send file: %v\n", err)
 		}

@@ -1,4 +1,5 @@
 {
   "local_save_path": "D:/GoProjects/src/gink/downloads",
-  "destinations": ["127.0.0.1:8000"]
+  "destinations": ["127.0.0.1:8000"],
+  "history_file_path": "D:/GoProjects/src/gink/history.json"
 }

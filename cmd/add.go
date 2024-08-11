@@ -7,10 +7,10 @@ import (
 )
 
 var addCmd = &cobra.Command{
-	Use:   "add [ip] [port]",
+	Use:   "add [ip]",
 	Short: "Add a new destination",
 	Long:  `Add a new IP address and port as a destination for sending files.`,
-	Args:  cobra.ExactArgs(2),
+	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		ip := args[0]
 		config.AppConfig.Destinations[0] = ip

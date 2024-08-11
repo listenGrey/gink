@@ -1,6 +1,6 @@
 package transfer
 
 type Transfer interface {
-	StartListener() error
-	SendFile(filename string, destinationIndex string) error
+	Send(filepath string, destinationIndex string) error
+	Receive() error
 }

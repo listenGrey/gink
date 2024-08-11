@@ -6,8 +6,9 @@ import (
 )
 
 type Config struct {
-	LocalDirection string   `json:"local_save_path"`
-	Destinations   []string `json:"destinations"`
+	LocalDirection  string   `json:"local_save_path"`
+	Destinations    []string `json:"destinations"`
+	HistoryFilePath string   `json:"history_file_path"`
 }
 
 var AppConfig Config

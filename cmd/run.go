@@ -13,8 +13,8 @@ var runCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Application is running...")
 		var Trans transfer.Transfer
-		Trans = &transfer.TCPTransfer{}
-		err := Trans.StartListener() // 启动监听服务
+		Trans = &transfer.TCPTransfer{} // 使用TCP协议
+		err := Trans.Receive()          // 启动监听服务
 		if err != nil {
 			fmt.Printf("Failed to receive file: %v\n", err)
 		}
