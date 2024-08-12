@@ -27,7 +27,9 @@ func main() {
  - 加密 yes
  - 传文件夹 NO
  - 同名文件 yes
- - WebSocket、UDP、gRpc
- - README、
- - 环境变量（直接输入gink）、window、Linux的下载release
+ - WebSocket yes
+ - 路径覆盖而不是追加 yes
+ - README
+ - 环境变量（直接输入gink）、window、Linux的下载release、下载后创建历史和配置文件，默认路径
+ - UDP、gRpc
 */

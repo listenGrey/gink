@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"gink/config"
 	"gink/pkg/transfer"
 	"github.com/spf13/cobra"
 )
@@ -17,7 +18,14 @@ var sendCmd = &cobra.Command{
 	Long:  `Send a file to a specified destination.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		var Trans transfer.Transfer
-		Trans = &transfer.TCPTransfer{} // 使用TCP协议
+		switch config.AppConfig.Protocols[0] {
+		case "websocket":
+			Trans = &transfer.WebSocketTransfer{} // 使用websocket协议
+		case "tcp":
+			Trans = &transfer.TCPTransfer{} // 使用TCP协议
+		default:
+			fmt.Println("Protocol error")
+		}
 		err := Trans.Send(filepath, destinationIndex)
 		if err != nil {
 			fmt.Printf("Failed to send file: %v\n", err)

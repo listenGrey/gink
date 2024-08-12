@@ -118,7 +118,7 @@ func (t *TCPTransfer) Receive() error {
 	}
 	defer listener.Close()
 
-	fmt.Println("TCP listening started on :8080")
+	fmt.Println("TCP listening started on :8000")
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
@@ -177,7 +177,7 @@ func (t *TCPTransfer) handleConnection(conn net.Conn) {
 		return
 	}
 
-	// 比较哈希值，如果不一致，则删除文件
+	// 比较哈希值，如果不一致，则建议删除文件
 	if string(filehash) != filehashed {
 		fmt.Printf("%s has risk, should delete it", filePath)
 		return

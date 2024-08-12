@@ -13,8 +13,8 @@ var addCmd = &cobra.Command{
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		ip := args[0]
-		config.AppConfig.Destinations[0] = ip
-		if err := config.SaveConfig(); err != nil {
+		err := config.AddDestination(ip)
+		if err != nil {
 			fmt.Printf("Error saving configuration: %s\n", err)
 		} else {
 			fmt.Println("Destination added.")

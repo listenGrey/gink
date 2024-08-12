@@ -1,5 +1,12 @@
 {
-  "local_save_path": "D:/GoProjects/src/gink/downloads",
-  "destinations": ["127.0.0.1:8000"],
-  "history_file_path": "D:/GoProjects/src/gink/history.json"
+    "local_save_path": "D:/GoProjects/src/gink/downloads",
+    "destinations": [
+        "192.168.1.14:8000",
+        "172.0.0.1:8000"
+    ],
+    "history_file_path": "D:/GoProjects/src/gink/history.json",
+    "protocols": [
+        "tcp",
+        "websocket"
+    ]
 }
