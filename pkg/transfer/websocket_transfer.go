@@ -116,6 +116,11 @@ func (wst *WebSocketTransfer) Receive() error {
 	return nil
 }
 
+// Stop 关闭监听
+func (wst *WebSocketTransfer) Stop() error {
+	return nil
+}
+
 // handleConnection 处理接收的连接
 func handleConnection(w http.ResponseWriter, r *http.Request) {
 	// 获取当前时间
