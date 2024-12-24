@@ -10,12 +10,10 @@ Gink is a command-line based Peer-to-Peer (P2P) file transfer application that a
 ### Installation
 - **Linux:**
   ``` bash
-    curl 
+    curl -L -o gink-1.0-linux.zip https://github.com/listenGrey/gink/releases/download/1.0/gink-1.0-linux.zip
     ```
 - **Windows:**
-    ``` bash
-  curl
-  ```
+    download releases 
 ### Configuration
 Edit the config.json file to set up initial parameters, including the default directory for received files and known peers:
 ``` json
